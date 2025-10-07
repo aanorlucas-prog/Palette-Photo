@@ -1,0 +1,35 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Photographer {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  bio       String?
+  createdAt DateTime @default(now())
+}
+
+model Client {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  phone     String?
+  createdAt DateTime @default(now())
+  Devis     Devis[]
+}
+
+model Devis {
+  id        Int      @id @default(autoincrement())
+  title      String
+  price      Float
+  status     String   @default("En attente")
+  clientId   Int
+  client     Client   @relation(fields: [clientId], references: [id])
+  createdAt  DateTime @default(now())
+}
