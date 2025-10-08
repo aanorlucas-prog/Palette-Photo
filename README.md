@@ -1,5 +1,7 @@
 # 🎨 Palette Photo
 
+# Projet actuellement en cours de développement, non fonctionnel; Ce README montre ce à quoi je veux que le site ressemble.
+
 **Palette Photo** est un projet complet développé avec **Next.js**, **React** et **NestJS**, conçu pour mettre en avant mes compétences en **développement web full-stack moderne**.
 
 Ce projet se compose de **deux applications complémentaires** autour d’un même univers : celui d’un **photographe professionnel**.
