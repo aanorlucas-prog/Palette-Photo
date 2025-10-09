@@ -1,12 +1,13 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-6 mt-12">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-        <p>© {new Date().getFullYear()} Palette Photo - Jean Dupont</p>
-        <p className="mt-2 md:mt-0">
-          Développé par <span className="text-indigo-400">Aanor Lucas</span>
-        </p>
-      </div>
+    <footer className="bg-[#050505] border-t border-amber-500/25 text-center py-6 text-sm text-gray-500 shadow-[0_-2px_10px_rgba(0,0,0,0.6)]">
+      <p>
+        © {new Date().getFullYear()}{" "}
+        <span className="text-amber-400 font-medium">Thomas Mercier</span> — Tous droits réservés
+      </p>
+      <p className="mt-1 text-gray-600">
+        Créé avec <span className="text-amber-400">❤️</span> par Aanor Lucas
+      </p>
     </footer>
   );
 }

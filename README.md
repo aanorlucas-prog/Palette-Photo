@@ -201,7 +201,7 @@ L’application ERP est accessible sur :
 
 Le script de seed Prisma crée automatiquement :
 
-un photographe (Jean Dupont)
+un photographe (Thomas Mercier)
 
 3 clients
 

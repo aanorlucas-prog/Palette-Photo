@@ -1,20 +1,40 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
+
+  const links = [
+    { href: "/", label: "Accueil" },
+    { href: "/portfolio", label: "Portfolio" },
+    { href: "/about", label: "A propos" },
+    { href: "/quote", label: "Devis" },
+  ];
+
   return (
-    <header className="bg-white/80 backdrop-blur shadow-sm sticky top-0 z-50">
-      <nav className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-        <Link href="/" className="text-2xl font-bold text-indigo-600">
+    <header className="fixed top-0 w-full z-50 bg-[#050505]/90 backdrop-blur-md border-b border-amber-500/20 shadow-[0_0_15px_rgba(0,0,0,0.7)]">
+      <nav className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+        <h1 className="text-2xl font-bold text-amber-400">
           Palette Photo
-        </Link>
-        <div className="flex gap-6 text-gray-700 font-medium">
-          <Link href="/">Accueil</Link>
-          <Link href="/about">Qui suis-je</Link>
-          <Link href="/portfolio">Portfolio</Link>
-          <Link href="/quote">Devis</Link>
-          <Link href="/contact">Contact</Link>
-        </div>
+        </h1>
+
+        <ul className="flex gap-8 text-sm font-medium">
+          {links.map(({ href, label }) => (
+            <li key={href}>
+              <Link
+                href={href}
+                className={`transition-colors ${
+                  pathname === href
+                    ? "text-amber-400"
+                    : "text-gray-400 hover:text-amber-300"
+                }`}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </nav>
     </header>
   );
