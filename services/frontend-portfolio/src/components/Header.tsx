@@ -9,7 +9,7 @@ export default function Header() {
     { href: "/", label: "Accueil" },
     { href: "/portfolio", label: "Portfolio" },
     { href: "/about", label: "A propos" },
-    { href: "/quote", label: "Devis" },
+    { href: "/quote", label: "Contact" },
   ];
 
   return (

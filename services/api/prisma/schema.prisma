@@ -33,3 +33,18 @@ model Devis {
   client     Client   @relation(fields: [clientId], references: [id])
   createdAt  DateTime @default(now())
 }
+model Rendezvous {
+  id        Int      @id @default(autoincrement())
+  title     String
+  date      DateTime
+  clientId  Int?
+  client    Client?   @relation(fields: [clientId], references: [id])
+}
+model Facture {
+  id        Int      @id @default(autoincrement())
+  number    String
+  amount    Float
+  date      DateTime @default(now())
+  clientId  Int
+  client    Client   @relation(fields: [clientId], references: [id])
+}
