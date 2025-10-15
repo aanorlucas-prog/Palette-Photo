@@ -1,7 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+
 import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
@@ -11,9 +9,9 @@ async function main() {
   // --- 1️⃣ Création d’un utilisateur (le photographe) ---
   const user = await prisma.user.create({
     data: {
-      name: 'Alex Martin',
-      email: 'alex.martin@example.com',
-      password: 'hashed_password_here', // ⚠️ à remplacer par un vrai hash bcrypt
+      name: 'Thomas Mercier',
+      email: 'thomas.mercier@email.com',
+      password: 'password', // ⚠️ à remplacer par un vrai hash bcrypt
       phone: '+33 6 12 34 56 78',
       address: '12 Rue de la Lumière, Lyon',
       bio: 'Photographe professionnel spécialisé en portraits, mariages et paysages.',
