@@ -76,7 +76,7 @@ async function main() {
       {
         number: 'INV-2025-001',
         amount: 1200.0,
-        issuedAt: new Date('2025-01-15'),
+        issueDate: new Date('2025-01-15'),
         dueDate: new Date('2025-02-15'),
         status: 'paid',
         userId: user.id,
@@ -85,7 +85,7 @@ async function main() {
       {
         number: 'INV-2025-002',
         amount: 250.0,
-        issuedAt: new Date('2025-03-10'),
+        issueDate: new Date('2025-03-10'),
         dueDate: new Date('2025-04-10'),
         status: 'unpaid',
         userId: user.id,
